@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class CepApiService {
 
 
-  private readonly baseUrl: string = 'https://viacep.com.br/ws'
+  private readonly  baseUrl: string="http://viacep.com.br/ws"
 
 
   constructor(
@@ -17,7 +17,7 @@ export class CepApiService {
   ) { }
 
   findCep(cep: string): Observable<Cep> {
-  return this.http.get<Cep>(`${this.baseUrl}/ ${cep}`)
+  return this.http.get<Cep>(`${this.baseUrl}/${cep}/json/`)
 
   }
 }
