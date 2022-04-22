@@ -1,0 +1,38 @@
+<div class="flex-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Pesquisar por Cep</mat-card-title>
+    </mat-card-header>
+
+    <form action=" #" id="main-form">
+      <mat-form-field apparence="outline">
+        <mat-label>CEP</mat-label>
+        <input type="number"
+         matInput
+         autocomplete="off"
+         [formControl]="cepToFind"
+         (keyup.enter)="showDialog()"
+
+         />
+
+        <mat-error>
+         Este campo é obrigatório
+        </mat-error>
+      </mat-form-field>
+
+      <button
+         mat-raised-button
+         color="accent"
+         [disabled]="cepToFind.invalid"
+         (click)="showDialog()"
+         >
+      <mat-icon>
+         search
+      </mat-icon>
+      </button>
+    </form>
+  </mat-card>
+</div>
+
+
+<!--formControl pela a propriedade elinka com o input -->
