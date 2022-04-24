@@ -16,15 +16,16 @@
          />
 
         <mat-error>
-         Este campo é obrigatório
+         Informe um cep para ser pesquisado
         </mat-error>
       </mat-form-field>
 
       <button
          mat-raised-button
+         type="button"
          color="accent"
          [disabled]="cepToFind.invalid"
-         (click)="showDialog()"
+         (click)=" showDialog()"
          >
       <mat-icon>
          search
